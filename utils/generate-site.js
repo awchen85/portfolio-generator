@@ -21,7 +21,7 @@ const writeFile = fileContent => {
 
 const copyFile = () => {
     return new Promise((resolve, reject) => {
-        fs.copyFile('./app.js', fileContent, err => {
+        fs.copyFile('./src/style.css', './dist/style.css', err => {
             //if there's an error, reject the Promise and send the error to Promise's `.catch` method
             if (err) {
                 reject(err);
@@ -30,7 +30,7 @@ const copyFile = () => {
             //if everything works, resolve promise and send to the `.then()` method
             resolve({
                 ok: true,
-                message: 'File Created!'
+                message: 'Stylesheet Created!'
             });
         });
     });
